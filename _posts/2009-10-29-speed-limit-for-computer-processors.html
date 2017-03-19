@@ -1,0 +1,14 @@
+---
+layout: post
+title: Speed limit for computer processors - serial vs parallel
+date: '2009-10-29T14:48:00.006Z'
+author: Douglas Ashton
+tags:
+- computation
+- links
+modified_time: '2010-06-10T11:59:25.480+01:00'
+blogger_id: tag:blogger.com,1999:blog-5457514384557268934.post-1094062633811166175
+blogger_orig_url: http://www.kineticallyconstrained.com/2009/10/speed-limit-for-computer-processors.html
+---
+
+This <a bitly="BITLY_PROCESSED" href="http://www.nature.com/nature/journal/v461/n7268/full/4611176b.html">news item</a> from Nature about <a bitly="BITLY_PROCESSED" href="http://link.aps.org/doi/10.1103/PhysRevLett.103.160502">this PRL</a> talks about how computer processors are going to hit a speed limit due to the speed at which a system can make transitions between quantum states.<br /><br /><blockquote>There are two independent bounds on this minimum time — one based on the average energy of the quantum system, the other based on the uncertainty in the system's energy. In their calculations, Levitin and Toffoli unify the bounds and show there is an absolute limit to the number of operations that can be achieved per second by a computer system of a given energy.</blockquote><br />I'm not an expert in quantum information so all I can say is that it looks interesting. There are implications for myself because most of my work is pretty intensive computer simulation. Some of what I do simply needs fast processors, there are sections of my Monte Carlo simulations that cannot be parallelised (fancy cluster algorithms being one). So for these, in principle, it limits what could <span style="font-style: italic;">ever</span> be done.<br /><br />However, mostly my limit is on what statistics I can collect and that can be solved by using more and more processors. The move from single core being standard, to eight these days, has been a revolution in terms of what I can now get done in a reasonable time scale.<br /><br />In fact one very interesting development is using standard computer graphics cards to perform molecular dynamics (MD) simulations. I've only read the <a bitly="BITLY_PROCESSED" href="http://dx.doi.org/10.1016/j.cpc.2008.05.008">abstract of this paper</a> I'm afraid but they've apparently done this. Graphics cards designed for games have many little processors on them (GPUs) and they can all work on the problem more efficiently than one super powered CPU trying to do it on its own.<br /><br />So next time you say that computer games are a waste of time think of this...

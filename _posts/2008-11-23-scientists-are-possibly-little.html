@@ -1,0 +1,12 @@
+---
+layout: post
+title: Scientists are possibly a little obsessive
+date: '2008-11-23T02:46:00.002Z'
+author: Douglas Ashton
+tags: 
+modified_time: '2008-11-23T03:18:20.502Z'
+blogger_id: tag:blogger.com,1999:blog-5457514384557268934.post-2550630237738099370
+blogger_orig_url: http://www.kineticallyconstrained.com/2008/11/scientists-are-possibly-little.html
+---
+
+I'm feeling pretty smug tonight because I finally managed to implement a new way of simulating the<a href="http://en.wikipedia.org/wiki/Ising_model"> Ising model</a> that I'd been thinking about off and on for years. At the same time I'm also feeling a bit sad that I've stayed up until 3am on a Saturday night doing it. I think it's the element of obsessive scientist that comes out occasionally where you have a tea/coffee fueled binge until you've solved the problem - it's probably not limited to scientists.<br /><br />The reason I wanted to do this will become clear soon (as in I'll post on it). I wanted to simulate a lattice with as many sites as possible so that I can do some visualisation of renormalisation group ideas (again more on this soon). Instead of storing each site inside a byte of memory I store 8 sites in each byte and then use a bit of binary operating to get the bit I need. This means each site now only takes one bit of memory.<br /><br />That was the easy bit. The hard bit was simulating this setup around the critical point. Critical points in statistical mechanics are incredibly interesting but real buggers to simulate. Fortunately there have been some very clever people who have worked out how to do this. I've not done anything that clever, but I have worked out how to implement a Wolff cluster algorithm using ~ N/4 bytes of memory which I think is good going.<br /><br />I will post on this again when I've managed to run the programme on our fancy new computer (it's got 8GB of RAM) and have a nice picture to show. I will also explain what the Ising model is and what a critical point is...
