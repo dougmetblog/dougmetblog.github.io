@@ -25,7 +25,18 @@ is_local_img <- function(img, pattern = "blogspot\\.com") {
   grepl(pattern, src)
 }
 
+is_local_img_a <- function(a, pattern = "blogspot\\.com") {
+  
+  imgs <- html_nodes(a, "img")
+  if(length(imgs)>1) {
+    stop("An a tag had more than one image!")
+  }
+  isTRUE(length(imgs)==1)
+}
+
 bpost <- read_html(html_file)
+
+a <- bpost %>% html_nodes("a")
 
 imgs <- bpost %>%
   html_nodes("img")
